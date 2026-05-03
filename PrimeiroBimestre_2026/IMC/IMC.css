@@ -1,107 +1,102 @@
-:root {
-    --rosa: #f96db3;
-    --rosa-claro: #ffa5f4;
-    --branco: #ffffff;
-    --beje: #eae1b6;
-    --rosa-escuro: #ff00b3;
+:root{
+    --beje: rgb(250, 243, 200);
+    --roxo: rgb(201, 32, 235);
+    --roxo-escuro: rgb(181, 23, 229);
+    --roxo-claro: rgb(237, 70, 249);
+    --lilas: rgb(235, 110, 249);
+    --lilas-claro: rgb(225, 127, 250);
 }
 
-#labelDoInputPeso {
-    color: var(--rosa-escuro);
-}
-
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: var(--branco);
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background-color:rgb(246, 182, 243);
     margin: 0;
-    padding: 0;
-    background-color: #fdb5d9;
+    padding:0;
 }
 
-header {
-    background-color: var(--rosa);
+header{
+    background-color: var(--lilas);
     color: white;
     text-align: center;
     padding: 15px;
     font-weight: bold;
 }
-
-main {
+main{
     display: flex;
     justify-content: center;
     align-items: center;
     height: 80vh;
 }
 
-section {
-    background: var(--beje);
+section{
+    background-color:var(--beje);
     padding: 30px;
     border-radius: 12px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
     width: 300px;
 }
 
-h1 {
+h1{
     text-align: center;
-    color: var(--rosa);
+    color:blueviolet;
 }
 
-label {
+label{
     display: block;
     margin-top: 10px;
     font-weight: bold;
 }
 
-input[type="number"] {
+input[type="number"]{
     width: 100%;
     padding: 10px;
     margin-top: 5px;
-    border-radius: 8px;
+    border-radius:8px;
     border: 1px solid #ccc;
     outline: none;
-    transition: 0.3s;
+    transition:0.3s;
 }
 
-input[type="number"]:focus {
-    background-color: var(--rosa-claro);
-    border-color: var(--rosa);
+input[type="number"]:focus{
+    background-color:var(--lilas-claro);
+    border-color:var(--roxo-claro);
 }
 
-button {
+button{
     width: 100%;
     margin-top: 15px;
     padding: 10px;
-    background-color: var(--rosa);
+    background-color:rgb(234, 118, 250);
     color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
     font-weight: bold;
+    border-radius: 8px;
+    border:none;
+    cursor: pointer;
 }
 
-button:hover {
-    background-color: #fe0087;
+button:hover{
+    background-color:var(--roxo);
 }
 
-.resultado {
+.resultado{
+    background-color: white;
+    border-radius: 8px;
     margin-top: 15px;
     padding: 10px;
-    background: white;
-    border-radius: 8px;
 }
 
-footer {
-    height: 10vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--beje);
+footer{
+    background-color:var(--beje);
     color: black;
     font-weight: bold;
-    transition: 0.3s;
+    align-items: center;
+    justify-content: center;
+    height: 10vh;
+    display: flex;
+    transition:0.3s;
 }
 
-footer.erro {
-    background-color: var(--rosa-escuro);
+footer.erro{
+    background-color:var(--roxo-escuro);
     color: white;
 }
