@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=UTF-8>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+</head>
+<body>
+
+<label for="inputId">Id</label>
+<input type="number" name="inputId" id="inputId">
+<input type="button" value="Procure" id="btProcure" onclick="procure()" style="display:inline;">
+<input type="button" value="Inserir" id="btInserir" onclick="inserir()" style="display:none;">
+<input type="button" value="Alterar" id="btAlterar" onclick="alterar()" style="display:none;">
+<input type="button" value="Excluir" id="btExcluir" onclick="excluir()" style="display:none;">
+<br>
+<label for = "inputNome">Nome</label>
+<input type="text" name="inputNome" id="inputNome">
+<br>
+
+<label for = "inputEspecialidade">Especialidade</label>
+<select id="inputEspecialidade">
+    <option value="">-- Selecione uma categoria --</option>
+        <option value="cabelo">Cabelo</option>
+        <option value="barba">Barba</option>
+        <option value="Sonbrancelha">Sonbrancelha</option>
+</select>
+<br>
+
+<label for = "inputTempo">Tempo</label>
+<input type="number" name="inputTempo" id="inputTempo">
+<br>
+
+<label for = "inputNivel">Nivel</label>
+<select name="inputNivel" id="inputNivel">
+      <option value="Iniciante">Iniciante</option>
+      <option value="Experiente">Experiente</option>
+      <option value="Profissional">Profissional</option>
+</select>
+<br>
+
+<label for = "inputAtuando">Atuando</label>
+<input type="checkbox" name="inputAtuando" id="inputAtuando">
+<br>
+
+<label for = "inputDataAdmissao">DataAdmissao</label>
+<input type="date" name="inputDataAdmissao" id="inputDataAdmissao">
+<br>
+
+<div id="divAviso" style="background-color: antiquewhite;"></div>
+<br>
+<input type="button" value="Salvar" id="btSalvar" onclick="salvar()" style="display:none;">
+<input type="button" value="Cancelar" id="btCancelar" onclick="cancelarOperacao()" style="display:none;">
+<br>
+<input type="button" value="Listar" onclick="listar()"><br>
+<div id="outputSaida" style="background-color: aqua;">...</div>
+
+<input type="button" value="Persistir" id="btPersisitir" onclick="prepararESalvarCSV()">
+<input type="button" value="Recuperar" id="btRecuperar" onclick="abrirArquivoSalvoEmLocalPermanente()">
+<br>
+<label for="inputNomeEscolhido">Escreva um nome da lista:</label>
+<input type="text" name="inputNomeEscolhido" id="inputNomeEscolhido">
+<input type="button" value="Listar pelo nome" id="listarPeloNome" onclick="localizarPeloNome()">
+<br>
+<label for="inputEspeciEscolhida">Escolha uma Especialidade:</label>
+<input type="text" name="inputEspeciEscolhida" id="inputEspeciEscolhida">
+<input type="button" value="filtrar por especialidade" id="filtrarPorEspecialidade" onclick="filtrarPorEspecialidade()">
+<br>
+<label for="inputFaixaMin">Faixa Mínima</label>
+<input type="number" name="inputFaixaMin" id="inputFaixaMin">
+<label for="inputFaixaMax">Faixa Máxima</label>
+<input type="number" name="inputFaixaMax" id="inputFaixaMax">
+<input type="button" value="Listar por faixa" id="listarPorFaixa" onclick="filtrarPorFaixa()">
+<script src="./Barbeiro.js"></script>
+<script src="./BarbeiroControle.js"></script>
+</body>
+</html>

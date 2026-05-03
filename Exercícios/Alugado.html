@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>CRUD Aluguel</title>
+</head>
+
+<body>
+
+   <h1>Cadastro de Aluguel</h1>
+
+   <label for="inputContrato">Número do Contrato:</label>
+   <input type="text" name="inputContrato" id="inputContrato">
+   <input type="button" value="Procure" id="btProcure" onclick="procure()" style="display:inline;">
+   <input type="button" value="Inserir" id="btInserir" onclick="inserir()" style="display:none;">
+   <input type="button" value="Alterar" id="btAlterar" onclick="alterar()" style="display:none;">
+   <input type="button" value="Excluir" id="btExcluir" onclick="excluir()" style="display:none;">
+   <br><br>
+
+   <label for="inputPropretario">Nome do Propretário:</label>
+   <input type="text" name="inputPropretario" id="inputPropretario">
+   <br>
+   <label for="inputInquilino">Nome do Inquilino:</label>
+   <input type="text" name="inputInquilino" id="inputInquilino">
+   <br>
+   <label for="inputAluguel">Valor do Aluguel:</label>
+   <input type="number" name="inputAluguel" id="inputAluguel">
+   <br>
+   <label for="inputAlugado">Está alugado?</label>
+   <input type="checkbox" name="inputAlugado" id="inputAlugado">
+   <br>
+   <label for="inputPrazo">Prazo do Contrato (em meses):</label>
+   <input type="number" name="inputPrazo" id="inputPrazo">
+   <br>
+   <label for="inputCepImovel">Cep do Imovel:</label>
+   <input type="text" name="inputCepImovel" id="inputCepImovel">
+   <br>
+   <label for="inputEndereco">Endereço do Imovel:</label>
+   <input type="text" name="inputEndereco" id="inputEndereco">
+   <br>
+   <label for="inputBairro">Bairro do Imovel:</label>
+   <input type="text" name="inputBairro" id="inputBairro">
+   <br>
+   <label for="inputCidade">Cidade do Imovel:</label>
+   <input type="text" name="inputCidade" id="inputCidade">
+   <br>
+
+
+   <br><br>
+   <div id="divAviso" style="background-color: antiquewhite;"></div>
+   <br>
+   <input type="button" value="Salvar" id="btSalvar" onclick="salvar()" style="display:none;">
+   <input type="button" value="Cancelar" id="btCancelar" onclick="cancelarOperacao()" style="display:none;">
+   <br><br>
+   <!-- <input type="button" value="Listar" onclick="listar()">
+    <br><br> -->
+
+   <div id="outputSaida" style="background-color: aqua;">...</div>
+
+   <input type="button" value="Persistir" id="btPersisitir" onclick="prepararESalvarCSV()">
+   <input type="button" value="Recuperar" id="btRecuperar" onclick="abrirArquivoSalvoEmLocalPermanente()">
+   <script src="./Alugado.js"></script>
+   <script src="./AlugadoControle.js"></script>
+</body>
+
+</html>

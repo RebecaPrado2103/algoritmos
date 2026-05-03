@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=UTF-8>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+</head>
+<body>
+
+<label for="inputId">Id</label>
+<input type="number" name="inputId" id="inputId">
+<input type="button" value="Procure" id="btProcure" onclick="procure()" style="display:inline;">
+<input type="button" value="Inserir" id="btInserir" onclick="inserir()" style="display:none;">
+<input type="button" value="Alterar" id="btAlterar" onclick="alterar()" style="display:none;">
+<input type="button" value="Excluir" id="btExcluir" onclick="excluir()" style="display:none;">
+<br>
+<label for = "inputNome">Nome</label>
+<input type="text" name="inputNome" id="inputNome">
+
+<br><label for = "inputCategoria">Categoria</label>
+<select id="inputCategoria">
+    <option value="">-- Selecione uma categoria --</option>
+        <option value="Assado">Assado</option>
+        <option value="Frito">Frito</option>
+        <option value="Congelado">Congelado</option>
+</select>
+
+<br><label for = "inputPeso">Peso</label>
+<input type="number" name="inputPeso" id="inputPeso">
+
+<br><label for = "inputPreco">Preco</label>
+<input type="number" name="inputPreco" id="inputPreco">
+
+<br><label for = "inputQuantidade">Quantidade</label>
+<input type="number" name="inputQuantidade" id="inputQuantidade">
+
+<br><label for = "inputData">Data</label>
+<input type="date" name="inputData" id="inputData">
+
+<br><label for = "inputAceitaEncomenda">AceitaEncomenda</label>
+<input type="checkbox" name="inputAceitaEncomenda" id="inputAceitaEncomenda">
+
+<br><div id="divAviso" style="background-color: antiquewhite;"></div>
+<br>
+<input type="button" value="Salvar" id="btSalvar" onclick="salvar()" style="display:none;">
+<input type="button" value="Cancelar" id="btCancelar" onclick="cancelarOperacao()" style="display:none;">
+<br>
+<input type="button" value="Listar" onclick="listar()"><br>
+<div id="outputSaida" style="background-color: aqua;">...</div>
+
+<input type="button" value="Persistir" id="btPersisitir" onclick="prepararESalvarCSV()">
+<input type="button" value="Recuperar" id="btRecuperar" onclick="abrirArquivoSalvoEmLocalPermanente()">
+<br><br>
+
+<label for="inputNomeInf">Informe um nome de salgado</label>
+<input type="text" name="inputNomeInf" id="inputNomeInf">
+<input type="button" value="Listar Pelo Nome" onclick="localizarPeloNome()">
+<br><br>
+
+<label for="CategoriaInf">Informe uma categoria</label>
+<select id="inputCategoriaInf" onchange="filtrarPorCategoria()">
+    <option value="">-- Selecione uma categoria --</option>
+        <option value="Assado">Assado</option>
+        <option value="Frito">Frito</option>
+        <option value="Congelado">Congelado</option>
+</select>
+<br><br>
+
+<label for="inputPreco1">Preço 1</label>
+<input type="number" name="inputPreco1" id="inputPreco1">
+<br>
+<label for="inputPreco2">Preço 2</label>
+<input type="number" name="inputPreco2" id="inputPreco2">
+<input type="button" value="listar por faixa de preco" onclick="listarPorFaixaDePreco()">
+<script src="./Salgado.js"></script>
+<script src="./SalgadoControle.js"></script>
+</body>
+</html>

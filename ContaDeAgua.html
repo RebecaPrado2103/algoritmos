@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conta de água</title>
+</head>
+<body>
+    <!--Escreva um algoritmo que retorne o valor a pagar em função do consumo.-->
+    <h1>Conta de água</h1>
+    <p>Coloque o valor do consumo e descubra o valor a pagar (água e esgoto).</p>
+    <label for="inputConsumo">Consumo</label>
+    <input type="number" id="inputConsumo">
+    <br><br>
+    <input type="button" value="Calcular" onclick="CalcularTotal()">
+    <br><br>
+    <label for="resultado">Resultado: </label>
+    <span id="resultado">…</span>
+    <script>
+        function CalcularTotal(){
+            let x = parseInt(document.getElementById("inputConsumo").value);
+            let resp = "";
+            if(x<0){
+                alert("Não é possível utilizar números negativos");
+            }else if(x<=5){
+                resp = 94.19;
+            }else if(x<=10){
+                resp = 94.19 + (x-5)*2.91;
+            }else if(x<=15){
+                resp = 108.74 + (x-10)*16.23;
+            }else if(x<=20){
+                resp = 189.89 + (x-15)*16.31;
+            }else if(x<=30){
+                resp = 271.44 + (x-20)*16.45;
+            }else{
+                resp = 435.94 + (x-30)*27.84;
+            }
+            document.getElementById("resultado").innerHTML=resp.toFixed(2);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>CRUD Notebook</title>
+</head>
+
+<body>
+
+   <h1>Cadastro de Notebook</h1>
+
+   <label for="inputId">Id</label>
+   <input type="text" name="inputId" id="inputId">
+   <input type="button" value="Procure" id="btProcure" onclick="procure()" style="display:inline;">
+   <input type="button" value="Inserir" id="btInserir" onclick="inserir()" style="display:none;">
+   <input type="button" value="Alterar" id="btAlterar" onclick="alterar()" style="display:none;">
+   <input type="button" value="Excluir" id="btExcluir" onclick="excluir()" style="display:none;">
+   <br><br>
+
+   <label for="inputModelo">Modelo</label>
+   <input type="text" name="inputModelo" id="inputModelo">
+   <br>
+   <label for="inputdataLancamento">Modelo</label>
+   <input type="date" name="inputdataLancamento" id="inputdataLancamento">
+   <br>
+   <label for="inputFabricante">Fabricante</label>
+   <input type="text" name="inputFabricante" id="inputFabricante">
+   <br>
+   <label for="inputquantidadeDeRAM">Quantidade de RAM (GB)</label>
+   <input type="number" name="inputquantidadeDeRAM" id="inputquantidadeDeRAM">
+   <br>
+   <label for="inputfabricanteDoProcessador">Fabricante do processador</label>
+   <input type="text" name="inputfabricanteDoProcessador" id="inputfabricanteDoProcessador">
+   <br>
+   <label for="inputArmazenamentoPermanente">Armazenamento permanente (GB)</label>
+   <input type="number" name="inputArmazenamentoPermanente" id="inputArmazenamentoPermanente">
+   <br>
+
+   <br><br>
+   <div id="divAviso" style="background-color: rgb(65, 159, 253);"></div>
+   <br>
+   <input type="button" value="Salvar" id="btSalvar" onclick="salvar()" style="display:none;">
+   <input type="button" value="Cancelar" id="btCancelar" onclick="cancelarOperacao()" style="display:none;">
+   <br><br>
+   <!-- <input type="button" value="Listar" onclick="listar()">
+    <br><br> -->
+
+   <div id="outputSaida" style="background-color: rgb(251, 132, 221);">...</div>
+
+   <input type="button" value="Persistir" id="btPersisitir" onclick="prepararESalvarCSV()">
+   <input type="button" value="Recuperar" id="btRecuperar" onclick="abrirArquivoSalvoEmLocalPermanente()">
+   <br><br>
+   <p>Esse botão lista apenas um notebook que tem uma quntidade de RAM maior ou igaul a que você definir</p>
+   <br>
+   <label for="inputRAM">RAM parâmetro</label>
+   <input type="number" name="inputRAM" id="inputRAM">
+   <br>
+   <input type="button" value="listar por RAM" id="btRAM" onclick="listarPorRAM()">
+   <script src="./Notebook.js"></script>
+   <script src="./NotebookControle.js"></script>
+</body>
+
+</html>
